@@ -49,15 +49,18 @@ body {
 #stickman {
   position: absolute;
   left: 120px;
-  top: 180px;
-  width: 160px;
+  top: 160px;
+
+  width: 280px;           /* 🔥 BIGGER */
+  max-width: 30vw;        /* responsive */
 
   pointer-events: auto;
-  transition: transform 0.4s ease;
+  transition: transform 0.35s ease;
 }
 
 #stickman img {
   width: 100%;
+  height: auto;
   pointer-events: none;
   user-select: none;
 }
@@ -68,18 +71,50 @@ body {
   position: absolute;
   right: 40px;
   top: 120px;
-  width: 180px;
-  padding: 15px;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
+
+  width: 90px;
+  padding: 14px;
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 10;
+
 }
 
 .weapon {
-  font-size: 32px;
-  margin: 10px;
+  font-size: 30px;
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.25);
+  border-radius: 12px;
+
   cursor: grab;
+  transition: transform 0.15s ease, background 0.15s ease;
 }
+
+.weapon:hover {
+  transform: scale(1.12);
+  background: rgba(255,255,255,0.4);
+}
+
+.weapon:active {
+  cursor: grabbing;
+  transform: scale(0.95);
+}
+
 
 /* Message */
 #message {
