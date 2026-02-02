@@ -41,7 +41,8 @@ screen2.ondrop = e => {
 };
 
 function hitStickman(text) {
-  stickman.style.transform = "rotate(90deg)";
+stickman.style.transform = "rotate(90deg) translateY(40px)";
+
   crack.currentTime = 0;
   ouch.currentTime = 0;
   crack.play();
