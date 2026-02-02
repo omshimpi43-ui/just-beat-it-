@@ -23,22 +23,18 @@ document.querySelectorAll(".weapon").forEach(w => {
   };
 });
 
-screen2.ondragover = e => e.preventDefault();
+stickman.addEventListener("dragover", (e) => {
+  e.preventDefault();
+});
 
-screen2.ondrop = e => {
+stickman.addEventListener("drop", (e) => {
+  e.preventDefault();
   if (!draggedWeapon) return;
 
-  const stickRect = stickman.getBoundingClientRect();
+  hitStickman(draggedWeapon.dataset.msg);
+  draggedWeapon = null;
+});
 
-  if (
-    e.clientX > stickRect.left &&
-    e.clientX < stickRect.right &&
-    e.clientY > stickRect.top &&
-    e.clientY < stickRect.bottom
-  ) {
-    hitStickman(draggedWeapon.dataset.msg);
-  }
-};
 
 function hitStickman(text) {
 stickman.style.transform = "rotate(90deg) translateY(40px)";
