@@ -1,1 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SCREEN 1 */
+.purple {
+  background: #6a0dad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#startText {
+  color: white;
+  font-size: 48px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#startText:hover {
+  transform: scale(1.1);
+}
+
+/* SCREEN 2 */
+.red {
+  background: #7a0000;
+}
+
+/* Stickman */
+#stickman {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+  width: 120px;
+  text-align: center;
+  transition: transform 0.4s;
+}
+
+.face {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.body {
+  width: 10px;
+  height: 100px;
+  background: black;
+  margin: auto;
+}
+
+/* Weapon Box */
+#weaponBox {
+  position: absolute;
+  right: 40px;
+  top: 120px;
+  width: 180px;
+  padding: 15px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+}
+
+.weapon {
+  font-size: 32px;
+  margin: 10px;
+  cursor: grab;
+}
+
+/* Message */
+#message {
+  position: absolute;
+  left: 250px;
+  top: 150px;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+}
 
