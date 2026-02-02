@@ -6,10 +6,11 @@ const message = document.getElementById("message");
 const crack = document.getElementById("crack");
 const ouch = document.getElementById("ouch");
 
-startText.onclick = () => {
-  screen1.classList.add("hidden");
-  screen2.classList.remove("hidden");
-};
+startText.addEventListener("click", () => {
+  screen1.style.display = "none";
+  screen2.style.display = "block";
+});
+
 
 // Drag logic
 let draggedWeapon = null;
