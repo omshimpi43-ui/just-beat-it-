@@ -46,21 +46,13 @@ body {
   background: #7a0000;
 }
 
-/* Stickman */
-#stickman {
-  position: absolute;
-  left: 100px;
-  top: 200px;
-  width: 120px;
-  text-align: center;
-  transition: transform 0.4s;
-}
-
 #stickman {
   position: absolute;
   left: 120px;
   top: 180px;
   width: 160px;
+
+  pointer-events: auto;
   transition: transform 0.4s ease;
 }
 
@@ -69,6 +61,7 @@ body {
   pointer-events: none;
   user-select: none;
 }
+
 
 /* Weapon Box */
 #weaponBox {
